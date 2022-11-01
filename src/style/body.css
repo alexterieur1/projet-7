@@ -1,0 +1,9 @@
+.image__titre{
+    position: absolute;
+}
+.image__titre--texte{
+    position: relative;
+    margin: 0px;
+    bottom: 0;
+    right: 0;
+}
