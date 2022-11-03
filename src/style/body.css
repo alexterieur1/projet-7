@@ -1,9 +1,18 @@
+.corps__image{
+    display: flex;
+justify-content: center;
+align-items: center;
+height: 300px;
+}
 .image__titre{
-    position: absolute;
+    position:absolute;
+    border-radius: 25px;
 }
 .image__titre--texte{
-    position: relative;
-    margin: 0px;
-    bottom: 0;
-    right: 0;
+    position:relative;
+    margin:0px;
+    font-family:'montserrat';
+    font-weight: 500;
+    color:white;
+    font-size: 40px;
 }

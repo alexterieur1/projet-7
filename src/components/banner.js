@@ -1,16 +1,23 @@
 import logo from '../assets/LOGO.svg'
-import acceuil from '../assets/LOGO.svg'
-import aPropos from '../assets/LOGO.svg'
+import { Outlet, Link } from 'react-router-dom'
+import '../style/banner.css'
 
 function Banner() {
     return (
-        <div>
-            <img src={logo} alt='logo'/>
+        <header>
+            <Link to='/'><img src={logo} alt='logo' /></Link>
             <nav>
-                <a href={acceuil}>Accueil</a>
-                <a href={aPropos}>A Propos</a>
+                <ul>
+                    <li className='li'>
+                        <Link to='/'>Accueil</Link>
+                    </li>
+                    <li className='li'>
+                        <Link to='/apropos'>A propos</Link>
+                    </li>
+                </ul>
             </nav>
-        </div>
+            <Outlet />
+        </header>
     )
 }
 

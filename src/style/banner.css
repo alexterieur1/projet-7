@@ -1,0 +1,23 @@
+header{
+    font-family:'montserrat';
+    display:flex;
+    justify-content: space-between;
+    color:#FF6060;
+}
+a:visited{
+    color:#FF6060;
+}
+a{
+    text-decoration: none;
+    font-size: 24px;
+}
+ul{
+    display:flex;
+    margin: 0px;
+    padding:0px;
+}
+.li{
+    list-style: none;
+    display:flex;
+    margin-left:30px;
+}
