@@ -1,0 +1,31 @@
+.corps__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:200px;
+}
+.corps__anonces{
+    padding:20px;
+    background-color: #F6F6F6;
+}
+.image__titre{
+    position:absolute;
+    border-radius: 25px;
+    height:200px;
+    max-width:1330px;
+    width:100%;
+    object-fit: cover;
+    object-position: 50% 45%;
+}
+.image__titre--texte{
+    position:relative;
+    margin:0px;
+    font-family:'montserrat';
+    font-weight: 500;
+    color:white;
+    font-size: 40px;
+}
+
+.corps__liste--logements{
+    background-color: #F6F6F6;
+}
