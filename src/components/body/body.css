@@ -4,15 +4,31 @@
     align-items: center;
     height:200px;
 }
-.corps__anonces{
-    padding:20px;
+.corps__annonces{
+    border-radius:35px;
+    margin-top:50px;
+    padding: 40px;
     background-color: #F6F6F6;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 40px;
+}
+.annonce{
+    /*max-height:340px;*/
+    aspect-ratio:1/1;
+    border-radius:20px;
+}
+.annonce__image{
+    object-fit: cover;
+    height:100%;
+    aspect-ratio: 1/1;
+    border-radius:20px;
 }
 .image__titre{
     position:absolute;
     border-radius: 25px;
     height:200px;
-    max-width:1330px;
+    max-width:1240px;
     width:100%;
     object-fit: cover;
     object-position: 50% 45%;

@@ -2,7 +2,7 @@ import imgPrincipale from '../../assets/banniere_accueil.jpeg'
 import './body.css'
 import logements from '../../logements.json'
 
-function Banner(props) {
+function Banner() {
     return (
         <main>
             <div className='corps__image'>
@@ -11,7 +11,10 @@ function Banner(props) {
             </div>
             <div className='corps__annonces'>
             {logements.map((logement) => (
-                <p>{logement.title}</p>
+                <a href={`./logement/:{logement.id}`} className='annonce'>
+                    <img className='annonce__image' src={logement.cover} alt={logement.title}/>
+                    {/* <p className='annonce__titre'>{logement.title}</p> */}
+                </a>
             ))}
             </div>
         </main>
