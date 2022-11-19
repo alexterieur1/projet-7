@@ -12,7 +12,7 @@ function Banner() {
             </div>
             <div className='corps__annonces'>
             {logements.map((logement) => (
-                <Link to='/' className='annonce'>
+                <Link to={`/logement/${logement.id}`} className='annonce'>
                     <img className='annonce__image' src={logement.cover} alt={logement.title}/>
                     {<p className='annonce__titre'>{logement.title}</p>}
                 </Link>
