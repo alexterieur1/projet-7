@@ -10,19 +10,29 @@
     padding: 40px;
     background-color: #F6F6F6;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
 }
 .annonce{
-    /*max-height:340px;*/
     aspect-ratio:1/1;
     border-radius:20px;
+    position:relative;
 }
 .annonce__image{
     object-fit: cover;
-    height:100%;
-    aspect-ratio: 1/1;
     border-radius:20px;
+    position: absolute;
+    aspect-ratio: 1/1;
+    max-width:100%;
+    height:100%;
+}
+.annonce__titre{
+    position: relative;
+    top:calc(100% - 45px - 15px);
+    left:15px;
+    width:calc(100% - 15px);
+    font-size:18px;
+    color:white;
 }
 .image__titre{
     position:absolute;

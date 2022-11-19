@@ -1,5 +1,6 @@
 import imgPrincipale from '../../assets/banniere_accueil.jpeg'
 import './body.css'
+import { Outlet, Link } from 'react-router-dom'
 import logements from '../../logements.json'
 
 function Banner() {
@@ -11,12 +12,13 @@ function Banner() {
             </div>
             <div className='corps__annonces'>
             {logements.map((logement) => (
-                <a href={`./logement/:{logement.id}`} className='annonce'>
+                <Link to='/' className='annonce'>
                     <img className='annonce__image' src={logement.cover} alt={logement.title}/>
-                    {/* <p className='annonce__titre'>{logement.title}</p> */}
-                </a>
+                    {<p className='annonce__titre'>{logement.title}</p>}
+                </Link>
             ))}
             </div>
+            <Outlet/>
         </main>
     )
 }
