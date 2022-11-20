@@ -1,5 +1,5 @@
 import imgPrincipale from '../../assets/banniere_accueil.jpeg'
-import './body.css'
+import './Body.scss'
 import { Outlet, Link } from 'react-router-dom'
 import logements from '../../logements.json'
 

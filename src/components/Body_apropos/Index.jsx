@@ -1,6 +1,6 @@
 import banniere from '../../assets/banniere_apropos.jpeg'
 import fleche from '../../assets/fleche.svg'
-import './body.css'
+import './Body.scss'
 import React, {useState} from 'react'
 
 function Banner() {

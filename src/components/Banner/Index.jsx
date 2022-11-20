@@ -1,6 +1,6 @@
 import logo from '../../assets/LOGO.svg'
 import { Outlet, Link } from 'react-router-dom'
-import './banner.css'
+import './Banner.scss'
 
 function Banner() {
     return (

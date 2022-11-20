@@ -1,4 +1,4 @@
-import './bodyErreur.css'
+import './Body_erreur.scss'
 import { Outlet, Link } from 'react-router-dom'
 
 function Banner() {
