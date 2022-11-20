@@ -8,3 +8,11 @@ header, main{
     max-width: 1240px;
     margin-inline: auto;
 }
+.Logement__titre{
+    color:#FF6060;
+    font-size: 36px;
+    font-weight: 500;
+}
+.Logement__lieux{
+    color:#FF6060;
+}

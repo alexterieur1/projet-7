@@ -2,7 +2,7 @@ import './Footer.scss'
 import logo from '../../assets/LOGO-footer.svg'
 import { Outlet, Link } from 'react-router-dom'
 
-function Banner() {
+function Footer() {
     return (
         <footer>
             <Link to='/'><img src={logo} alt='logo' /></Link>
@@ -12,4 +12,4 @@ function Banner() {
     )
 }
 
-export default Banner
+export default Footer

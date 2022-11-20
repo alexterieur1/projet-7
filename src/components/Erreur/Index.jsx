@@ -1,7 +1,7 @@
 import './Body_erreur.scss'
 import { Outlet, Link } from 'react-router-dom'
 
-function Banner() {
+function bodyErreur() {
     return (
         <main>
             <div className='corps__erreur'>
@@ -14,4 +14,4 @@ function Banner() {
     )
 }
 
-export default Banner
+export default bodyErreur

@@ -3,7 +3,7 @@ import './Body.scss'
 import { Outlet, Link } from 'react-router-dom'
 import logements from '../../logements.json'
 
-function Banner() {
+function Body() {
     return (
         <main>
             <div className='corps__image'>
@@ -23,4 +23,4 @@ function Banner() {
     )
 }
 
-export default Banner
+export default Body
