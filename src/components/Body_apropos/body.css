@@ -6,8 +6,10 @@
     border-radius: 5px;
     max-width:1023px;
     margin-inline: auto;
-    margin-top:20px;
-    padding:10px 0px 10px 10px;
+    margin-top:30px;
+    padding:10px;
+    display:flex;
+    justify-content: space-between;
 }
 .corps__titre--apropos p {
     font-size: 24px;
@@ -17,7 +19,7 @@
     color:#FF6060;
     font-weight: 400;
     border-radius: 5px;
-    padding:20px 10px 0px 10px;
+    padding:20px 10px 5px 10px;
     max-width:1023px;
     margin-inline: auto;
     font-size: 24px;
