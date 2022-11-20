@@ -1,7 +1,7 @@
 import React from 'react'
-import Banner from '../components/Banner/Index'
-import Body from '../components/Erreur/Index'
-import Footer from '../components/Footer/Index'
+import Banner from '../components/Banner'
+import Body from '../components/Erreur'
+import Footer from '../components/Footer'
 
 function accueil() {
     return (
