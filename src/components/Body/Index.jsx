@@ -10,11 +10,11 @@ function Body() {
                 <img className='image__titre' src={imgPrincipale} alt='illustration titre'/>
                 <p className='image__titre--texte'>Chez vous, partout et ailleurs</p>
             </div>
-            <div className='corps__annonces'>
-            {logements.map((logement) => (
-                <Link to={`/logement/${logement.id}`} className='annonce'>
-                    <img className='annonce__image' src={logement.cover} alt={logement.title}/>
-                    {<p className='annonce__titre'>{logement.title}</p>}
+            <div className='corps__annonces'>{
+            logements.map((e) => (
+                <Link to={`/logement/${e.id}`} className='annonce'>
+                    <img className='annonce__image' src={e.cover} alt={e.title}/>
+                    <p className='annonce__titre'>{e.title}</p>
                 </Link>
             ))}
             </div>

@@ -1,0 +1,12 @@
+.tag{
+    display:flex;
+    &__element{
+        background-color: #FF6060;
+        color:white;
+        font-size: 14px;
+        border-radius: 10px;
+        padding-block:5px;
+        padding-inline: 20px;
+        margin-right:10px;
+    }
+}

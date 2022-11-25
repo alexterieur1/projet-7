@@ -8,11 +8,26 @@ header, main{
     max-width: 1240px;
     margin-inline: auto;
 }
-.Logement__titre{
+.logement__informations, .logement__notes{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:20px;
+}
+.logement__titre{
     color:#FF6060;
     font-size: 36px;
     font-weight: 500;
 }
-.Logement__lieux{
+.logement__lieux{
     color:#FF6060;
+}
+.logement__photo{
+    width:64px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+}
+.logement__profil{
+    display:flex;
 }
