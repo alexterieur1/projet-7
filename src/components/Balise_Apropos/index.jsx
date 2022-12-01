@@ -2,7 +2,7 @@ import fleche from '../../assets/fleche.svg'
 import './Body.scss'
 import React, {useState} from 'react'
 
-function Body(props) {
+function Balise(props) {
 
     const [Fleche, setFleche] = useState(180)
     const [Texte, setTexte] = useState('none')
@@ -32,4 +32,4 @@ function Body(props) {
     )
 }
 
-export default Body
+export default Balise

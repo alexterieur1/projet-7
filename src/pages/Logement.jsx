@@ -3,10 +3,10 @@ import React from 'react'
 import Banner from '../components/Banner'
 import Footer from '../components/Footer'
 import Carrousel from '../components/Carrousel'
-import { getOneLogement } from '../api'
 import Tags from '../components/Tags'
 import Balise from '../components/Balise_Apropos'
 import '../index.css'
+import { getOneLogement } from '../api'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
@@ -15,23 +15,20 @@ function Accueil() {
     const [logement, setLogement] = useState(null)
 
     let { id } = useParams()
-    console.log(getOneLogement('c67ab8a7'))
-    console.log({id}.id)
     useEffect( () => {
         const search = async () => {
             let infoLogement = await getOneLogement({id}.id)
-            console.log(infoLogement)
             setLogement(infoLogement)
         }
         search()
-    }, [])
+    }, [id])
     return (
         <React.Fragment>
             <Banner />
             <main>
-                <Carrousel />
                 { logement ? (
                     <>
+                    <Carrousel pictures={`${logement.pictures}`}/>
                         <div>
                             <div className='logement__informations'>
                                 <div>

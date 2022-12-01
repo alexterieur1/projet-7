@@ -1,6 +1,28 @@
-.Carrousel{
-    width:100%;
-    object-fit:cover;
-    max-height:300px;
-    border-radius: 20px;
+.carrousel{
+    max-width:1240px;
+    height:420px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    &__image{
+        width:fit-content;
+        position:absolute;
+        object-fit:cover;
+        max-height:420px;
+        border-radius: 20px;
+    }
+    &__fleche{
+        position:relative;
+        width:79px;
+        height:47px;
+        z-index:2;
+        &--gauche{
+            transform:rotate(270deg);
+            right:0px;
+        }
+        &--droite{
+            transform:rotate(90deg);
+            left:0px;
+        }
+    }
 }
