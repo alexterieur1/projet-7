@@ -4,9 +4,13 @@
     margin:0px;
     font-family:'montserrat';
 }
+main{
+    min-height:calc(100vh - 94px);
+}
 header, main{
     max-width: 1240px;
     margin-inline: auto;
+    margin-bottom: 20px;
 }
 .logement__informations, .logement__notes{
     width:100%;
@@ -30,4 +34,28 @@ header, main{
 }
 .logement__profil{
     display:flex;
+}
+.balises{
+    display:grid;
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    grid-gap: 30px;
+}
+.logement__hebergeur--nom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right:10px;
+}
+.tag{
+    display:flex;
+}
+.tag__element{
+    background-color: #FF6060;
+    color:white;
+    font-size: 14px;
+    border-radius: 10px;
+    padding-block:5px;
+    padding-inline: 20px;
+    margin-right:10px;
 }

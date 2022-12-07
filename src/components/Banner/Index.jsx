@@ -12,7 +12,7 @@ function Banner() {
                         <Link to='/'>Accueil</Link>
                     </li>
                     <li className='li'>
-                        <Link to='/apropos'>A propos</Link>
+                        <Link to='/apropos'>A Propos</Link>
                     </li>
                 </ul>
             </nav>

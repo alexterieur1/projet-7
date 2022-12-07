@@ -1,9 +1,9 @@
-import etoile from '../assets/etoile.svg'
 import React from 'react'
 import Banner from '../components/Banner'
 import Footer from '../components/Footer'
 import Carrousel from '../components/Carrousel'
 import Tags from '../components/Tags'
+import Rating from '../components/Rating'
 import Balise from '../components/Balise_Apropos'
 import '../index.css'
 import { getOneLogement } from '../api'
@@ -36,23 +36,24 @@ function Accueil() {
                                     <p className='logement__lieux'>{logement.location}</p>
                                 </div>
                                 <div className='logement__profil'>
-                                    <p className='logement__hebergeur__nom'>{logement.host.name}</p>
-                                    <img className='logement__photo' src={`${logement.host.picture}`} alt='profil' />
+                                    <p className='logement__hebergeur--nom'>
+                                        <p>{logement.host.name.split(' ')[0]}</p>
+                                        <p>{logement.host.name.split(' ')[1]}</p>
+                                    </p>
+                                    <img className='logement__photo' src={logement.host.picture} alt='profil' />
                                 </div>
                             </div>
                             <div className='logement__notes'>
-                                <Tags />
-                                <div>
-                                    <img src={etoile} alt={`note: ${logement.rating} etoiles`} />
-                                    <img src={etoile} alt={`note: ${logement.rating} etoiles`} />
-                                    <img src={etoile} alt={`note: ${logement.rating} etoiles`} />
-                                    <img src={etoile} alt={`note: ${logement.rating} etoiles`} />
-                                    <img src={etoile} alt={`note: ${logement.rating} etoiles`} />
+                                <div className='tag'>
+                                <Tags tag={logement.tags}/>
                                 </div>
+                                <Rating rating={logement.rating}/>
                             </div>
                         </div>
-                        <Balise titre='description' texte={`${logement.description}`}/>
-                        <Balise titre='equipement'texte={`${logement.equipments}`}/>
+                        <div className='balises'>
+                        <Balise titre='description' texte={[logement.description]}/>
+                        <Balise titre='equipement'texte={logement.equipments}/>
+                        </div>
                     </>
                 ): <></>}
             </main>
