@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    padding:0px;
+    margin:0px;
+    font-family:'montserrat';
+}
+main{
+    min-height:calc(100vh - 94px);
+}
+header, main{
+    max-width: 1240px;
+    margin-inline: auto;
+    margin-bottom: 20px;
+}
+.logement__informations--gauche, .logement__informations--droite{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top:20px;
+}
+.logement{
+    &__informations{
+        display:flex;
+    }
+    &__titre{
+        color:#FF6060;
+        font-size: 36px;
+        font-weight: 500;
+    }
+    &__lieux{
+        color:#FF6060;
+    }
+    &__photo{
+        width:64px;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+    }
+    &__profil{
+        display:flex;
+    }
+    &__hebergeur--nom{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding-right:10px;
+    }
+}
+.balises{
+    display:grid;
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    grid-gap: 30px;
+}
+.tag{
+    display:flex;
+}
+@media (max-width:1250px){
+    header{
+        padding-inline: 20px;
+    }
+    .logement{
+        &__titre{
+            font-size: 18px;
+        }
+        &__lieux{
+            font-size: 14px;
+        }
+        &__hebergeur--nom{
+            font-size: 12px;
+        }
+        &__informations{
+            flex-direction: column;
+            padding-inline: 20px;;
+            &--droite{
+                flex-direction: row-reverse;
+                margin-top:0px;
+            }
+            &--gauche{
+                align-items: flex-start;
+                margin-top:0px;
+            }
+        }
+    }
+    .balises{
+        grid-template-columns: 1fr;
+        padding-inline: 20px;
+        grid-gap: 15px;
+    }
+}

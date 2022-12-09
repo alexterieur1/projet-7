@@ -5,7 +5,7 @@ import Carrousel from '../components/Carrousel'
 import Tags from '../components/Tags'
 import Rating from '../components/Rating'
 import Balise from '../components/Balise_Apropos'
-import '../index.css'
+import '../index.scss'
 import { getOneLogement } from '../api'
 import { useState } from 'react'
 import { useEffect } from 'react'
@@ -29,23 +29,22 @@ function Accueil() {
                 { logement ? (
                     <>
                     <Carrousel pictures={`${logement.pictures}`}/>
-                        <div>
-                            <div className='logement__informations'>
+                        <div className='logement__informations'>
+                            <div className='logement__informations--gauche'>
                                 <div>
                                     <p className='logement__titre'>{logement.title}</p>
                                     <p className='logement__lieux'>{logement.location}</p>
+                                </div><div className='tag'>
+                                <Tags tag={logement.tags}/>
                                 </div>
-                                <div className='logement__profil'>
+                            </div>
+                            <div className='logement__informations--droite'>
+                            <div className='logement__profil'>
                                     <p className='logement__hebergeur--nom'>
                                         <p>{logement.host.name.split(' ')[0]}</p>
                                         <p>{logement.host.name.split(' ')[1]}</p>
                                     </p>
                                     <img className='logement__photo' src={logement.host.picture} alt='profil' />
-                                </div>
-                            </div>
-                            <div className='logement__notes'>
-                                <div className='tag'>
-                                <Tags tag={logement.tags}/>
                                 </div>
                                 <Rating rating={logement.rating}/>
                             </div>

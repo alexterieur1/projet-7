@@ -1,38 +1,42 @@
-.corps__image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:200px;
-}
-.corps__annonces{
-    border-radius:35px;
-    margin-top:50px;
-    padding: 40px;
-    background-color: #F6F6F6;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+.corps{
+    &__image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:200px;
+    }
+    &__annonces{
+        border-radius:35px;
+        margin-top:50px;
+        padding: 40px;
+        background-color: #F6F6F6;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+    }
 }
 .annonce{
     aspect-ratio:1/1;
     border-radius:20px;
     position:relative;
-}
-.annonce__image{
-    object-fit: cover;
-    border-radius:20px;
-    position: absolute;
-    aspect-ratio: 1/1;
-    max-width:100%;
-    height:100%;
-}
-.annonce__titre{
-    position: relative;
-    top:calc(100% - 45px - 15px);
-    left:15px;
-    width:calc(100% - 15px);
-    font-size:18px;
-    color:white;
+    background: linear-gradient(to top, black, white);
+    &__image{
+        object-fit: cover;
+        border-radius:20px;
+        position: absolute;
+        aspect-ratio: 1/1;
+        width:100%;
+        max-height:100%;
+        opacity:0.8;
+    }
+    &__titre{
+        position: relative;
+        top:calc(100% - 45px - 15px);
+        left:15px;
+        width:calc(100% - 15px);
+        font-size:18px;
+        color:white;
+    }
 }
 .image__titre{
     position:absolute;
@@ -41,17 +45,41 @@
     max-width:1240px;
     width:100%;
     object-fit: cover;
-    object-position: 50% 45%;
+    object-position: 50% 50%;
+    filter:brightness(0.7);
+    &--texte{
+        position:relative;
+        margin:0px;
+        font-family:'montserrat';
+        font-weight: 500;
+        color:white;
+        font-size: 40px;
+    }
 }
-.image__titre--texte{
-    position:relative;
-    margin:0px;
-    font-family:'montserrat';
-    font-weight: 500;
-    color:white;
-    font-size: 40px;
-}
-
 .corps__liste--logements{
     background-color: #F6F6F6;
+}
+@media (max-width: 1250px){
+    .corps{
+        &__annonces{
+            background-color: white;
+            padding-inline:20px;
+            padding-block: 0px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .image__titre{
+        padding-inline: 20px;
+        border-radius: 10%;
+        &--texte{
+            font-size: 24px;
+        }
+    }
+    .annonce{
+        aspect-ratio: 10/9;
+        &__titre{
+            bottom:0;
+        }
+    }
 }

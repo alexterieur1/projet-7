@@ -4,7 +4,7 @@ import Accueil from './pages/Accueil'
 import APropos from './pages/Apropos'
 import Erreur from './pages/Erreur'
 import Logements from './pages/Logement'
-import './index.css'
+import './index.scss'
 
 function App() {
     return (

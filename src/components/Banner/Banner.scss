@@ -23,3 +23,12 @@ nav{
     display:flex;
     align-items: center;
 }
+@media (max-width: 1250px){
+    a{
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    .logo{
+        width:145px;
+    }
+}

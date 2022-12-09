@@ -5,7 +5,7 @@ import './Banner.scss'
 function Banner() {
     return (
         <header>
-            <Link to='/'><img src={logo} alt='logo' /></Link>
+            <Link to='/'><img className='logo' src={logo} alt='logo' /></Link>
             <nav>
                 <ul>
                     <li className='li'>

@@ -24,3 +24,14 @@
     margin-inline: auto;
     font-size: 24px;
 }
+@media (max-width:1250px){
+    .corps__texte--apropos{
+        font-size: 12px;
+    }
+    .corps__titre--apropos p{
+        font-size: 13px;
+    }
+    .corps__titre--apropos{
+        margin-top: 15px;
+    }
+}
