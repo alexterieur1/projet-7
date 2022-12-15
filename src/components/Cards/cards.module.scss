@@ -8,11 +8,11 @@
     &__annonces{
         border-radius:35px;
         margin-top:50px;
-        padding: 40px;
+        padding: 30px;
         background-color: #F6F6F6;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 40px;
+        gap: 30px;
     }
 }
 .annonce{
@@ -47,7 +47,7 @@
     object-fit: cover;
     object-position: 50% 50%;
     filter:brightness(0.7);
-    &--texte{
+    &__texte{
         position:relative;
         margin:0px;
         font-family:'montserrat';
@@ -59,27 +59,40 @@
 .corps__liste--logements{
     background-color: #F6F6F6;
 }
-@media (max-width: 1250px){
+@media (max-width: 950px){
     .corps{
         &__annonces{
-            background-color: white;
+            background-color: #F6F6F6;
             padding-inline:20px;
-            padding-block: 0px;
-            display: flex;
-            flex-direction: column;
+            padding-block: 20px;
+            grid-template-columns: 1fr 1fr;
+            gap:20px;
         }
     }
     .image__titre{
         padding-inline: 20px;
-        border-radius: 10%;
-        &--texte{
-            font-size: 24px;
-        }
+        border-radius: 15px;
     }
     .annonce{
         aspect-ratio: 10/9;
         &__titre{
             bottom:0;
+        }
+    }
+}
+@media (max-width: 720px){
+    .corps{
+        &__annonces{
+            background-color: white;
+            grid-template-columns: 1fr;
+        }
+    }
+}
+@media (max-width: 650px){
+
+    .image__titre{
+        &__texte{
+            font-size: 24px;
         }
     }
 }

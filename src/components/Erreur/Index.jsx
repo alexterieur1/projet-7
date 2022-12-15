@@ -1,19 +1,19 @@
-import './Body_erreur.scss'
+import style from './erreur.module.scss'
 import { Outlet, Link } from 'react-router-dom'
 
-function bodyErreur() {
+function Erreur() {
     return (
         <main>
-            <div className='corps__erreur'>
-                <div className='corps__erreur--global'>
-                <p className='corps__erreur--404'>404</p>
-                <p className='corps__erreur--texte'>Oups! La page que vous demandez n'existe pas.</p>
+            <div className={style.corps__erreur}>
+                <div className={style.corps__erreur__global}>
+                <p className={style.corps__erreur__404}>404</p>
+                <p className={style.corps__erreur__texte}>Oups! La page que vous demandez n'existe pas.</p>
                 </div>
-                <Link to='/' className='corps__erreur--liens'>Retourner sur la page d’accueil</Link>
+                <Link to='/' className={style.corps__erreur__liens}>Retourner sur la page d’accueil</Link>
             </div>
             <Outlet />
         </main>
     )
 }
 
-export default bodyErreur
+export default Erreur

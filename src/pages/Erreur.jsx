@@ -1,14 +1,10 @@
 import React from 'react'
-import Banner from '../components/Banner'
-import Body from '../components/Erreur'
-import Footer from '../components/Footer'
+import BodyErreur from '../components/Erreur'
 
 function accueil() {
     return (
         <React.Fragment>
-            <Banner />
-            <Body />
-            <Footer />
+            <BodyErreur />
         </React.Fragment>
     )
 }

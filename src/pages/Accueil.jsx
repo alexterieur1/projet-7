@@ -1,8 +1,7 @@
 import imgPrincipale from '../assets/banniere_accueil.jpeg'
 import React from 'react'
-import Banner from '../components/Banner'
-import Body from '../components/Body'
-import Footer from '../components/Footer'
+import Body from '../components/Cards'
+import style from '../components/Cards/cards.module.scss'
 import { getAllLogement } from '../api'
 import { useState } from 'react'
 import { useEffect } from 'react'
@@ -19,13 +18,11 @@ function Accueil() {
     }, [])
     return (
         <React.Fragment>
-            <Banner />
-            <main>
-                <div className='corps__image'>
-                    <img className='image__titre' src={imgPrincipale} alt='illustration titre' />
-                    <p className='image__titre--texte'>Chez vous, partout et ailleurs</p>
+            <div className={style.corps__image}>
+                    <img className={style.image__titre} src={imgPrincipale} alt='illustration titre' />
+                    <p className={style.image__titre__texte}>Chez vous, partout et ailleurs</p>
                 </div>
-                <div className='corps__annonces'>
+                <div className={style.corps__annonces}>
                     {logement ? (
                         logement.map((logement) =>
                             <Body id={logement.id}
@@ -33,8 +30,6 @@ function Accueil() {
                                 title={logement.title} />))
                         : <></>}
                 </div>
-            </main>
-            <Footer />
         </React.Fragment>
     )
 }

@@ -1,5 +1,5 @@
-.corps__titre--apropos{
-    width:100%;
+.corps__titre__apropos{
+    width:calc(100% - 20px);
     background-color:#FF6060;
     color:white;
     font-weight: 500;
@@ -11,10 +11,11 @@
     display:flex;
     justify-content: space-between;
 }
-.corps__titre--apropos p {
+.corps__titre__apropos p {
     font-size: 24px;
 }
-.corps__texte--apropos{
+.corps__texte__apropos{
+    width:calc(100% - 20px);
     background-color:#F6F6F6;
     color:#FF6060;
     font-weight: 400;
@@ -24,14 +25,14 @@
     margin-inline: auto;
     font-size: 24px;
 }
-@media (max-width:1250px){
-    .corps__texte--apropos{
+@media (max-width:700px){
+    .corps__texte__apropos{
         font-size: 12px;
     }
-    .corps__titre--apropos p{
+    .corps__titre__apropos p{
         font-size: 13px;
     }
-    .corps__titre--apropos{
+    .corps__titre__apropos{
         margin-top: 15px;
     }
 }

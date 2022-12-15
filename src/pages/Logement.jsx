@@ -1,10 +1,8 @@
 import React from 'react'
-import Banner from '../components/Banner'
-import Footer from '../components/Footer'
 import Carrousel from '../components/Carrousel'
 import Tags from '../components/Tags'
 import Rating from '../components/Rating'
-import Balise from '../components/Balise_Apropos'
+import Balise from '../components/Balise'
 import '../index.scss'
 import { getOneLogement } from '../api'
 import { useState } from 'react'
@@ -24,8 +22,6 @@ function Accueil() {
     }, [id])
     return (
         <React.Fragment>
-            <Banner />
-            <main>
                 { logement ? (
                     <>
                     <Carrousel pictures={`${logement.pictures}`}/>
@@ -50,13 +46,11 @@ function Accueil() {
                             </div>
                         </div>
                         <div className='balises'>
-                        <Balise titre='description' texte={[logement.description]}/>
-                        <Balise titre='equipement'texte={logement.equipments}/>
+                        <Balise>{'description'}{[logement.description]}</Balise>
+                        <Balise>{'equipement'}{logement.equipments}</Balise>
                         </div>
                     </>
                 ): <></>}
-            </main>
-            <Footer />
         </React.Fragment >
     )
 }

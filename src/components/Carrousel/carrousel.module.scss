@@ -15,17 +15,17 @@
         width:79px;
         height:47px;
         z-index:2;
-        &--gauche{
+        &__gauche{
             transform:rotate(270deg);
             right:0px;
         }
-        &--droite{
+        &__droite{
             transform:rotate(90deg);
             left:0px;
         }
     }
 }
-@media (max-width: 1250px){
+@media (max-width: 1050px){
     .carrousel{
         height:275px;
         justify-content: space-around;
