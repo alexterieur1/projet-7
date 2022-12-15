@@ -18,6 +18,7 @@ header, main{
     justify-content: space-between;
     flex-direction: column;
     margin-top:20px;
+    padding-inline:10px;
 }
 .logement__informations--droite{
     align-items: flex-end;
@@ -77,7 +78,7 @@ header, main{
         }
         &__informations{
             flex-direction: column;
-            padding-inline: 20px;
+            padding-inline: 0px;
             &--droite{
                 flex-direction: row-reverse;
 
@@ -94,6 +95,6 @@ header, main{
     }
     .balises{
         grid-template-columns: 1fr;
-        grid-gap: 15px;
+        grid-gap: 0px;
     }
 }

@@ -25,12 +25,11 @@ function Balise(props) {
                 <img style={{ rotate: Fleche + 'deg' }} src={fleche} alt='fleche en svg' />
             </div>
             {Texte ? (
-                <div >
                     <div className={style.corps__texte__apropos}>
                         {props.children[1].map((element, index) => <p key={index}>{element}</p>
                         )}
                     </div>
-                </div>)
+                    )
                  : <></>}
         </>
     )
