@@ -1,6 +1,6 @@
 import logo from '../../assets/LOGO.svg'
-import { Outlet, Link } from 'react-router-dom'
-import style from './banner.module.scss'
+import { Outlet, Link, NavLink } from 'react-router-dom'
+import style from './Banner.module.scss'
 
 function Banner() {
     return (
@@ -9,10 +9,10 @@ function Banner() {
             <nav>
                 <ul>
                     <li className={style.li}>
-                        <Link to='/'>Accueil</Link>
+                        <NavLink to='/' className={({isActive}) => isActive ? style.active : undefined}>Accueil</NavLink>
                     </li>
                     <li className={style.li}>
-                        <Link to='/apropos'>A Propos</Link>
+                        <NavLink to='/apropos' className={({isActive}) => isActive ? style.active : undefined}>A Propos</NavLink>
                     </li>
                 </ul>
             </nav>

@@ -1,7 +1,7 @@
 import imgPrincipale from '../assets/banniere_accueil.jpeg'
 import React from 'react'
 import Body from '../components/Cards'
-import style from '../components/Cards/cards.module.scss'
+import style from './Accueil.module.scss'
 import { getAllLogement } from '../api'
 import { useState } from 'react'
 import { useEffect } from 'react'
@@ -20,7 +20,7 @@ function Accueil() {
         <React.Fragment>
             <div className={style.corps__image}>
                     <img className={style.image__titre} src={imgPrincipale} alt='illustration titre' />
-                    <p className={style.image__titre__texte}>Chez vous, partout et ailleurs</p>
+                    <p className={style.image__titre__texte}>Chez vous, {`\n`}partout et ailleurs</p>
                 </div>
                 <div className={style.corps__annonces}>
                     {logement ? (

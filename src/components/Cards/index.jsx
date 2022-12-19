@@ -1,7 +1,7 @@
-import style from './cards.module.scss'
+import style from './Cards.module.scss'
 import { Outlet, Link } from 'react-router-dom'
 
-function Body(props) {
+function Cards(props) {
     return (
         <>
                 <Link to={`/logement/${props.id}`} className={style.annonce} key={props.id}>
@@ -13,4 +13,4 @@ function Body(props) {
     )
 }
 
-export default Body
+export default Cards

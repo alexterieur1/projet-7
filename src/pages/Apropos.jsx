@@ -1,12 +1,13 @@
 import banniere from '../assets/banniere_apropos.jpeg'
 import React from 'react'
 import Balise from '../components/Balise'
+import style from './Accueil.module.scss'
 
 function accueil() {
     return (
         <React.Fragment>
-                <div className='corps__image'>
-                    <img className='image__titre' src={banniere} alt='illustration titre'/>
+                <div className={style.corps__image}>
+                    <img className={style.image__titre} src={banniere} alt='illustration titre'/>
                 </div>
                 <Balise>
                 {'Fiabilité'}

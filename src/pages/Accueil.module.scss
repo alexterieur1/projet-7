@@ -1,0 +1,120 @@
+.corps{
+    &__image{
+        display:flex;
+        align-items: center;
+        max-width:1240px;
+        width:calc(100% - 40px);
+        height:200px;
+        position:relative;
+        border-radius: 15px;
+    }
+    &__annonces{
+        margin-top:50px;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+.image__titre{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    position:absolute;
+    filter:brightness(0.7);
+    border-radius: 15px;
+    &__texte{
+        position:absolute;
+        font-family:'montserrat';
+        font-weight: 500;
+        color:white;
+        font-size: 24px;
+        left:30px;
+        white-space: pre;
+    }
+}
+
+@media(min-width:750px){
+    .image__titre{
+        &__texte{
+            left:auto;
+            font-size: 40px;
+            white-space: normal;
+        }
+    }
+    .corps{
+        &__annonces{
+            width:calc(100% - 40px);
+            margin-inline:10px;
+            padding:40px;
+            grid-template-columns: 1fr 1fr;
+            background-color: #F6F6F6;
+            gap:40px;
+            border-radius:25px;
+        }
+        &__image{
+            justify-content: center;
+        }
+    }
+}
+@media(min-width:1100px){
+    .image__titre{
+        &__texte{
+            left:30px;
+            font-size: 48px;
+        }
+    }
+    .corps{
+        &__image{
+            width:100%;
+        }
+        &__annonces{
+            max-width: 1240px;
+            width:100%;
+            margin-inline:10px;
+            padding:40px;
+            grid-template-columns: 1fr 1fr 1fr;
+            background-color: #F6F6F6;
+            gap:40px;
+        }
+    }
+}
+
+
+
+/* 
+
+.corps__liste--logements{
+    background-color: #F6F6F6;
+}
+@media (max-width: 950px){
+    .corps{
+        &__annonces{
+            background-color: #F6F6F6;
+            padding-inline:20px;
+            padding-block: 20px;
+            grid-template-columns: 1fr 1fr;
+            gap:20px;
+        }
+    }
+    .image__titre{
+        padding-inline: 20px;
+        border-radius: 15px;
+    }
+}
+@media (min-width: 720px){
+    .corps{
+        &__annonces{
+            background-color: white;
+            grid-template-columns: 1fr;
+        }
+    }
+}
+@media (min-width: 650px){
+
+    .image__titre{
+        &__texte{
+        }
+    }
+} */

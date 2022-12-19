@@ -1,5 +1,5 @@
 import fleche from '../../assets/fleche.svg'
-import style from './balise.module.scss'
+import style from './Balise.module.scss'
 import React, { useState } from 'react'
 
 function Balise(props) {
@@ -19,19 +19,20 @@ function Balise(props) {
     }
     console.log(props.children[1])
     return (
-        <>
+        <div className={style.corps__balise__apropos}>
             <div onClick={() => StateTexte()} className={style.corps__titre__apropos}>
                 <p>{props.children[0]}</p>
                 <img style={{ rotate: Fleche + 'deg' }} src={fleche} alt='fleche en svg' />
             </div>
             {Texte ? (
-                    <div className={style.corps__texte__apropos}>
-                        {props.children[1].map((element, index) => <p key={index}>{element}</p>
-                        )}
-                    </div>
-                    )
-                 : <></>}
-        </>
+                <div className={style.corps__texte__apropos}>
+                    {props.children[1].map((element, index) => <p key={index}>{element}</p>
+                    )}
+                </div>
+            )
+                : <></>}
+
+        </div>
     )
 }
 

@@ -1,4 +1,4 @@
-import style from './tags.module.scss'
+import style from './Tags.module.scss'
 
 function tag(props) {
     return (

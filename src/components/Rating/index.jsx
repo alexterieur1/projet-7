@@ -1,4 +1,4 @@
-import style from './rating.module.scss'
+import style from './Rating.module.scss'
 
 function Rating(props){
     let tableauEtoiles = []
