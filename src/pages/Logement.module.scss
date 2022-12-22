@@ -1,10 +1,15 @@
 .logement {
     &__titre {
+        padding-block: 10px;
         font-size: 18px;
+        color: #FF6060;
+        font-weight: 500;
     }
 
     &__lieux {
         font-size: 14px;
+        color: #FF6060;
+        font-weight: 500;
     }
 
     &__hebergeur__nom {
@@ -12,11 +17,11 @@
     }
 
     &__informations {
-        display:flex;
+        display: flex;
         flex-direction: column;
         padding-inline: 10px;
         justify-content: space-between;
-        width:100%;
+        width: 100%;
 
         &__droite {
             display: flex;
@@ -29,13 +34,12 @@
                     display: flex;
                 }
             }
+        }
 
-            &__gauche {
-                align-items: space-beetwen;
-                margin-top: 0px;
-                gap: 20px;
-                padding-bottom: 20px;
-            }
+        &__gauche {
+            margin-top: 0px;
+            gap: 10px;
+            padding-bottom: 20px;
         }
     }
 
@@ -54,59 +58,64 @@
             border-radius: 100%;
         }
     }
-    &__tag{
-        display:flex;
-        flex-wrap: wrap;
-        gap:10px;
-    }
-}
 
-.balises{
-    width:100%;
-    grid-gap: 0px;
-}
-@media(min-width:750px){
-    .logement{
-        &__informations{
-            &__gauche{
-                padding-top:20px;
-                gap:20px;
-                div{
-                    color:#FF6060;
-                    font-weight: 500;
+    &__tag {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .balises {
+        width: 100%;
+        grid-gap: 0px;
+    }
+
+    @media(min-width:750px) {
+        .logement {
+            &__informations {
+                &__gauche {
+                    padding-top: 20px;
+                    gap: 20px;
+                }
+            }
+
+            &__titre {
+                padding-bottom: 5px;
+                font-size: 36px;
+            }
+
+            &___texte {
+                font-size: 18px;
+            }
+        }
+
+        .balises {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
+        }
+    }
+
+    @media(min-width:1000px) {
+        .logement {
+            &__informations {
+                flex-direction: row;
+
+                &__gauche {
+                    padding-inline: 0px;
+                    flex-direction: column;
+                }
+
+                &__droite {
+                    flex-direction: column;
+                    align-items: flex-end;
+                    padding-top: 20px;
                 }
             }
         }
-        &__titre{
-            padding-bottom:5px;
-            font-size:36px;
-        }
-        &___texte{
-            font-size: 18px;
-        }
-    }
-    .balises{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 30px;
     }
 }
-@media(min-width:1000px){
-    .logement{
-        &__informations{
-            flex-direction: row;
-            &__gauche{
-                padding-inline: 0px;
-                flex-direction: column;
-            }
-            &__droite{
-                flex-direction: column;
-                align-items: flex-end;
-                padding-top:20px;
-            }
-        }
-    }
-}
+
 /* 
 .balises{
     display:grid;

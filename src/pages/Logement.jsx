@@ -37,18 +37,18 @@ function Accueil() {
                         </div>
                         <div className={`${style.logement__informations__droite} ${style.logement__informations}`}>
                             <div className={style.logement__profil}>
-                                <p className={`${style.logement__hebergeur__nom} ${style.logement__hebergeur}`}>
+                                <span className={`${style.logement__hebergeur__nom} ${style.logement__hebergeur}`}>
                                     <p>{logement.host.name.split(' ')[0]}</p>
                                     <p>{logement.host.name.split(' ')[1]}</p>
-                                </p>
+                                </span>
                                 <img className={`${style.logement__hebergeur__photo} ${style.logement__hebergeur}`} src={logement.host.picture} alt='profil' />
                             </div>
                             <Rating rating={logement.rating} />
                         </div>
                     </div>
                     <div className={style.balises}>
-                        <Balise>{'description'}{[logement.description]}</Balise>
-                        <Balise>{'equipement'}{logement.equipments}</Balise>
+                        <Balise title='description'>{[logement.description]}</Balise>
+                        <Balise title='equipement'>{logement.equipments}</Balise>
                     </div>
                 </>
             ) : <></>}

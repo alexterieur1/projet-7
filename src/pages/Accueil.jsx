@@ -24,8 +24,8 @@ function Accueil() {
                 </div>
                 <div className={style.corps__annonces}>
                     {logement ? (
-                        logement.map((logement) =>
-                            <Body id={logement.id}
+                        logement.map((logement,index) =>
+                            <Body key={index} id={logement.id}
                                 cover={logement.cover}
                                 title={logement.title} />))
                         : <></>}

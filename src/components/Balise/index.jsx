@@ -4,29 +4,26 @@ import React, { useState } from 'react'
 
 function Balise(props) {
 
-    const [Fleche, setFleche] = useState(180)
-    const [Texte, setTexte] = useState(false)
-
+    const [isOpen, setIsOpen] = useState(false)
+/* 
     const StateTexte = () => {
         if (Texte === true) {
-            setFleche(Fleche + 180)
-            setTexte(false)
+            isOpen(false)
         }
         else {
-            setTexte(true)
-            setFleche(Fleche - 180)
+            isOpen(true)
         }
-    }
-    console.log(props.children[1])
+    } */
+    console.log(isOpen)
     return (
         <div className={style.corps__balise__apropos}>
-            <div onClick={() => StateTexte()} className={style.corps__titre__apropos}>
-                <p>{props.children[0]}</p>
-                <img style={{ rotate: Fleche + 'deg' }} src={fleche} alt='fleche en svg' />
+            <div onClick={()=> isOpen ? setIsOpen(false): setIsOpen(true)} className={style.corps__titre__apropos}>
+                <p>{props.title}</p>
+                <img /*style={isOpen ? transform : rotate(0deg) : transform : rotate(0deg)}*/ src={fleche} alt='fleche en svg' />
             </div>
-            {Texte ? (
+            {isOpen ? (
                 <div className={style.corps__texte__apropos}>
-                    {props.children[1].map((element, index) => <p key={index}>{element}</p>
+                    {props.children.map((element, index) => <p key={index}>{element}</p>
                     )}
                 </div>
             )

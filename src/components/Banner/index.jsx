@@ -5,7 +5,7 @@ import style from './Banner.module.scss'
 function Banner() {
     return (
         <header>
-            <Link to='/'><img className={style.logo} src={logo} alt='logo' /></Link>
+            <Link className={style.logo__liens} to='/'><img className={style.logo} src={logo} alt='logo' /></Link>
             <nav>
                 <ul>
                     <li className={style.li}>
