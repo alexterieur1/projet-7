@@ -1,5 +1,5 @@
 footer{
-    font-size: 24px;
+    font-size: 12px;
     padding-block: 30px;
     display:flex;
     flex-direction: column;
@@ -10,4 +10,9 @@ footer{
 }
 .footer__texte{
     margin-left:0px;
+}
+@media(min-width:750px){
+    footer{
+        font-size: 24px;
+    }
 }

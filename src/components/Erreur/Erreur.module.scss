@@ -36,7 +36,25 @@
     }
   }
 }
+
 @media(min-width:750px){
+  .corps{
+    &__erreur{
+      &__404{
+        font-size: 158px;
+      }
+      &__texte{
+        font-size: 24px;
+        white-space: normal;
+      }
+      &__liens{
+        font-size: 18px;;
+      }
+    }
+  }
+}
+
+@media(min-width:900px){
   .corps{
     &__erreur{
       &__404{
@@ -47,7 +65,7 @@
         white-space: normal;
       }
       &__liens{
-        font-size: 18px;;
+        font-size: 18px;
       }
     }
   }

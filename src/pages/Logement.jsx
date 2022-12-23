@@ -47,8 +47,8 @@ function Accueil() {
                         </div>
                     </div>
                     <div className={style.balises}>
-                        <Balise title='description'>{[logement.description]}</Balise>
-                        <Balise title='equipement'>{logement.equipments}</Balise>
+                        <Balise title='description'><p>{logement.description}</p></Balise>
+                        <Balise title='equipement'>{logement.equipments.map((element, index)=> <p key={index}>{element}</p>)}</Balise>
                     </div>
                 </>
             ) : <></>}

@@ -10,9 +10,11 @@
     padding:10px;
     display:flex;
     justify-content: space-between;
+    position: relative;
 }
 .corps__titre__apropos p {
     font-size: 13px;
+    font-weight: 500;
 }
 .corps__texte__apropos{
     width:calc(100% - 20px);
@@ -20,7 +22,7 @@
     color:#FF6060;
     font-weight: 400;
     border-radius: 5px;
-    padding:20px 10px 5px 10px;
+    padding:10px 10px 5px 10px;
     max-width:1023px;
     margin-inline: auto;
     font-size: 12px;
@@ -34,7 +36,10 @@
         font-size: 24px;
     }
     .corps__titre__apropos p{
-        font-size: 24px;
+        font-size: 18px;
+    }
+    .corps__texte__apropos p{
+        font-size: 18px;
     }
     .corps__balise__apropos{
         width:calc(100% - 20px);
