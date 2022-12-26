@@ -9,7 +9,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
-function Accueil() {
+function Logement() {
     const [logement, setLogement] = useState(null)
 
     let { id } = useParams()
@@ -56,4 +56,4 @@ function Accueil() {
     )
 }
 
-export default Accueil
+export default Logement

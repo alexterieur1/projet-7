@@ -1,7 +1,7 @@
 import React from 'react'
 import BodyErreur from '../components/Erreur'
 
-function accueil() {
+function Erreur() {
     return (
         <React.Fragment>
             <BodyErreur />
@@ -9,4 +9,4 @@ function accueil() {
     )
 }
 
-export default accueil
+export default Erreur

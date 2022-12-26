@@ -8,7 +8,7 @@ function Balise(props) {
 
     return (
         <div className={style.corps__balise__apropos}>
-            <div onClick={()=> isOpen ? setIsOpen(false): setIsOpen(true)} className={style.corps__titre__apropos}>
+            <div onClick={()=> setIsOpen(oldIsOpen => !oldIsOpen)} className={style.corps__titre__apropos}>
                 <p>{props.title}</p>
                 <img style={{transform: isOpen ? ('rotate(180deg)') : ('rotate(0deg)')}} src={fleche} alt='fleche en svg' />
             </div>
