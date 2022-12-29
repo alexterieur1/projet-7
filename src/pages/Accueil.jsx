@@ -3,19 +3,15 @@ import React from 'react'
 import Body from '../components/Cards'
 import style from './Accueil.module.scss'
 import { getAllLogement } from '../api'
-import { useState } from 'react'
-import { useEffect } from 'react'
+import { useLoaderData } from 'react-router-dom'
+
+export async function loadData(){
+    const logement = await getAllLogement()
+    return {logement}
+}
 
 function Accueil() {
-    const [logement, setLogement] = useState(null)
-
-    useEffect(() => {
-        const search = async () => {
-            let infoLogement = await getAllLogement()
-            setLogement(infoLogement)
-        }
-        search()
-    }, [])
+    const { logement } =useLoaderData()
     return (
         <React.Fragment>
             <div className={style.corps__image}>

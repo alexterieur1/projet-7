@@ -1,5 +1,5 @@
 import style from './Erreur.module.scss'
-import { Outlet, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Erreur() {
     return (
@@ -11,7 +11,6 @@ function Erreur() {
                 </div>
                 <Link to='/' className={style.corps__erreur__liens}>Retourner sur la page d’accueil</Link>
             </div>
-            <Outlet />
         </>
     )
 }

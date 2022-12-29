@@ -5,21 +5,16 @@ import Rating from '../components/Rating'
 import Balise from '../components/Balise'
 import style from './Logement.module.scss'
 import { getOneLogement } from '../api'
-import { useState } from 'react'
-import { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
+
+export async function loadData(props){
+    const logement = await getOneLogement(props.params.id)
+    return {logement}
+}
 
 function Logement() {
-    const [logement, setLogement] = useState(null)
-
-    let { id } = useParams()
-    useEffect(() => {
-        const search = async () => {
-            let infoLogement = await getOneLogement({ id }.id)
-            setLogement(infoLogement)
-        }
-        search()
-    }, [id])
+    const {logement} = useLoaderData()
+    
     return (
         <React.Fragment>
             {logement ? (

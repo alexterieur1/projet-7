@@ -1,5 +1,5 @@
 import logo from '../../assets/LOGO.svg'
-import { Outlet, Link, NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import style from './Banner.module.scss'
 
 function Banner() {
@@ -16,7 +16,6 @@ function Banner() {
                     </li>
                 </ul>
             </nav>
-            <Outlet />
         </header>
     )
 }

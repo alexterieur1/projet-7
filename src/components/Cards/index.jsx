@@ -1,5 +1,5 @@
 import style from './Cards.module.scss'
-import { Outlet, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Cards(props) {
     return (
@@ -8,7 +8,6 @@ function Cards(props) {
                     <img className={style.annonce__image} src={props.cover} alt={props.title} />
                     <p className={style.annonce__titre}>{props.title}</p>
                 </Link>
-            <Outlet />
         </>
     )
 }
